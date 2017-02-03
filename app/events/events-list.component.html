@@ -1,0 +1,11 @@
+<div>
+    <h1>Upcoming Angular 2 Events</h1>
+    <hr/>
+    <!--<event-thumbnail #thumbnail [event]="eventParent" (eventClick)="handleEventCliecked($event)"></event-thumbnail> -->
+    <!--<button class="btn btn-primary" (click)="thumbnail.logFoo()"></button><-->
+    <!--<h2>{{thumbnail.someProperty}}</h2>-->
+    <div *ngFor="let event of events" class="col-md-5">
+        <event-thumbnail #thumbnail [event]="event" (click)="handleEventCliecked(event.name)"></event-thumbnail>
+    </div>
+
+</div>
