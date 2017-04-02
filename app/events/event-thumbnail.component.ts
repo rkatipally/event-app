@@ -1,4 +1,5 @@
 import {Component, Input, Output, EventEmitter} from "@angular/core";
+import {IEvent} from "./shared/event.model";
 /**
  * Created by atp3rxk on 2/3/2017.
  */
@@ -13,9 +14,8 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
     ]
 })
 export class EventThumbnailComponent {
-    @Input() event: any;
+    @Input() event: IEvent;
     @Output() eventClick = new EventEmitter();
-    //someProperty:String = "Some Value";
     handleClickMe() {
         console.log("clicked")
         this.eventClick.emit("Foo");
